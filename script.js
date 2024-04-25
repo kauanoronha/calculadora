@@ -8,7 +8,7 @@ function calcularParcelas() {
         if (i < 4) {
             valorParcela = valorTotal / i;
         } else {
-            var taxaJuros = 0.03; // 3% de juros
+            var taxaJuros = 0.1255; // 3% de juros
             var montante = valorTotal * Math.pow(1 + taxaJuros, i - 3);
             valorParcela = montante / i;
         }
