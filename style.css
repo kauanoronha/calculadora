@@ -19,7 +19,21 @@ th, td {
     text-align: center;
 }
 
-input[type="number"] {
+input[type="number"], button {
     padding: 8px;
     margin-right: 10px;
+    width: calc(50% - 15px);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    input[type="number"], button {
+        width: 100%; /* Faz os inputs e botão ocuparem a largura total em telas menores */
+        margin-top: 5px; /* Adiciona um espaço entre os elementos quando estiverem um sobre o outro */
+        margin-right: 0;
+    }
+
+    th, td {
+        padding: 4px; /* Reduz o padding das células da tabela para economizar espaço */
+    }
 }
