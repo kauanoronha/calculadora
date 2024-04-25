@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Juros Compostos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora de Juros Compostos</h1>
+    <div>
+        <label for="valorTotal">Valor Total:</label>
+        <input type="number" id="valorTotal" placeholder="Insira o valor total">
+        <button onclick="calcularParcelas()">Confirmar</button>
+    </div>
+    <table id="tabelaParcelamento">
+        <thead>
+            <tr>
+                <th>Número de Parcelas</th>
+                <th>Valor da Parcela</th>
+                <th>Valor Total da Compra</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As linhas da tabela serão inseridas aqui pelo JavaScript -->
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
