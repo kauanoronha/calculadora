@@ -5,6 +5,14 @@ body {
     line-height: 1.6;
 }
 
+.input-container {
+    margin-bottom: 20px; /* Espaço entre o container e a tabela */
+    background-color: #f4f4f4; /* Cor de fundo para destacar o container */
+    padding: 10px; /* Espaço interno para não ficar muito junto dos bordos */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve para um visual mais profundo */
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -17,11 +25,6 @@ table, th, td {
 th, td {
     padding: 8px;
     text-align: center;
-}
-
-/* Especifica a largura da primeira coluna (Número de Parcelas) */
-th:first-child, td:first-child {
-    width: 20%; /* Reduz a largura da coluna Número de Parcelas */
 }
 
 input[type="number"], button {
@@ -38,7 +41,6 @@ button {
     cursor: pointer;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 600px) {
     input[type="number"], button {
         width: 100%;
