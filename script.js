@@ -24,7 +24,7 @@ function calcularParcelas() {
         var celulaValorTotal = novaLinha.insertCell(2);
 
         celulaParcela.innerHTML = i + 'x';
-        celulaValorParcela.innerHTML = ('R$'),valorParcela.toFixed(2).replace('.',',');
+        celulaValorParcela.innerHTML = ('R$'),valorParcela.toFixed(2);
         celulaValorTotal.innerHTML = montante.toFixed(2);
     }
 }
