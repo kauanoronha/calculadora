@@ -6,11 +6,11 @@ body {
 }
 
 .input-container {
-    margin-bottom: 20px; /* Espaço entre o container e a tabela */
-    background-color: #f4f4f4; /* Cor de fundo para destacar o container */
-    padding: 10px; /* Espaço interno para não ficar muito junto dos bordos */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra leve para um visual mais profundo */
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 table {
@@ -20,35 +20,35 @@ table {
 
 table, th, td {
     border: 1px solid black;
-}
-
-th, td {
-    padding: 8px;
+    padding: 12px; /* Aumentado para melhor toque em dispositivos móveis */
     text-align: center;
 }
 
+th:first-child, td:first-child {
+    width: 25%; /* Ajuste a largura conforme necessário para visualização móvel */
+}
+
 input[type="number"], button {
-    padding: 8px;
-    margin-right: 10px;
-    width: calc(50% - 15px);
+    padding: 12px; /* Mais espessura para facilitar a interação */
+    margin: 5px 0; /* Aumenta a margem para separação clara em dispositivos móveis */
+    width: 100%; /* Uso total da largura disponível */
 }
 
 button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px; /* Mais arredondado */
     cursor: pointer;
+    font-size: 16px; /* Tamanho de fonte maior para leitura fácil */
 }
 
 @media (max-width: 600px) {
-    input[type="number"], button {
-        width: 100%;
-        margin-top: 5px;
-        margin-right: 0;
+    th, td {
+        padding: 8px;
     }
 
-    th, td {
-        padding: 4px;
+    .input-container {
+        padding: 10px;
     }
 }
