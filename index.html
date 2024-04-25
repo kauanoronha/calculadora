@@ -1,29 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculadora de Juros Compostos</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Acrescimo de vendas Lojão Total</h1>
-    <div class="input-container">
-        <label for="valorTotal">Valor Total:</label>
-        <input type="number" id="valorTotal" placeholder="Insira o valor total">
-        <button onclick="calcularParcelas()">Confirmar</button>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap - Prebuilt Layout</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center; /* Ou 'center' para centralizar, ou 'right' para alinhar à direita */
+            border-bottom: 1px solid #ddd;
+			/*white-space: nowrap; evita que itens quebre linha*/
+        }
+		
+    </style>
+	
+	
+  </head>
+  <body>
+    
+    <div class="container">
+	<center> <img src="logo.png" > </center>
+      <br>
+      <title>Calculadora de Juros Compostos</title>
+          <h3>Calculadora de Juros</h3>
+			<div class="input-container">
+				<label for="valorTotal">Valor Total:</label>
+				<input type="number" id="valorTotal" placeholder="Insira o valor total" onkeydown="submitOnEnter(event)">				
+				<button id="enviar" onclick="calcularParcelas()">Confirmar</button>
+			</div>
+			<table class="table table-striped table-bordered table-condensed" id="tabelaParcelamento">
+				<thead>
+					<tr>
+						<th>Número de Parcelas</th>
+						<th>Valor da Parcela</th>
+						<th>Valor Total da Compra</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- As linhas da tabela serão inseridas aqui pelo JavaScript -->
+				</tbody>
+			</table>
+			<script src="script.js"></script>
+		
+			
+       <br/>
+       <br/>
+       
     </div>
-    <table id="tabelaParcelamento">
-        <thead>
-            <tr>
-                <th>Número de Parcelas</th>
-                <th>Valor da Parcela</th>
-                <th>Valor Total da Compra</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- As linhas da tabela serão inseridas aqui pelo JavaScript -->
-        </tbody>
-    </table>
-    <script src="script.js"></script>
-</body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js">
+		document.addEventListener("keypress", function(e) {
+		  if(e.key === 'Enter') {
+
+			  var btn = document.querySelector("enviar");
+
+		btn.click();
+
+		  }
+		});  
+	</script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
 </html>

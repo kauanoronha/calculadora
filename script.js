@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Adiciona o evento ao campo de entrada para submeter ao pressionar Enter
+    document.getElementById('valorTotal').addEventListener('keydown', submitOnEnter);
+});
 function calcularParcelas() {
     var valorTotal = parseFloat(document.getElementById('valorTotal').value);
     var tabela = document.getElementById('tabelaParcelamento').getElementsByTagName('tbody')[0];
@@ -26,5 +30,14 @@ function calcularParcelas() {
         celulaParcela.innerHTML = i + 'x';
         celulaValorParcela.innerHTML = 'R$' + ' ' + valorParcela.toFixed(2).replace('.',',');
         celulaValorTotal.innerHTML = 'R$' + ' ' + montante.toFixed(2).replace('.',',');
+    }
+}
+function submitOnEnter(event) {
+    // Verifica se a tecla pressionada é 'Enter'
+    if (event.key === "Enter") {
+        // Impede a ação padrão do 'Enter', que é submeter o formulário
+        event.preventDefault();
+        // Chama a função de calcular as parcelas
+        calcularParcelas();
     }
 }
