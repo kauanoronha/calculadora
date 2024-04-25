@@ -6,9 +6,11 @@ function calcularParcelas() {
     for (var i = 1; i <= 10; i++) {
         var valorParcela;
         if (i < 4) {
+            // Sem juros até a 3ª parcela
             valorParcela = valorTotal / i;
         } else {
-            var taxaJuros = 0.1255; // 3% de juros
+            // Aplica juros de 3% ao valor total a partir da 4ª parcela
+            var taxaJuros = 0.03; // 3% de juros
             var montante = valorTotal * Math.pow(1 + taxaJuros, i - 3);
             valorParcela = montante / i;
         }
