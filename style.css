@@ -54,6 +54,12 @@ button {
         padding: 8px;
     }
 
+    .logo {
+        max-width: 300px; /* Ajusta a largura máxima da imagem para 300px */
+        width: 100%; /* A imagem ocupará 100% do container, mas não mais que 300px */
+        height: auto; /* Mantém a proporção da imagem ajustando a altura automaticamente */
+    }
+
     .input-container {
         padding: 10px;
     }
