@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário Simples</title>
+</head>
+<body>
+    <h1>Entrada de Dados</h1>
+    <form action="URL_PARA_ONDE_ENVIAR_DADOS" method="post">
+        <label for="inputField">Digite algo:</label>
+        <input type="text" id="inputField" name="inputField" required>
+        <button type="submit">Confirmar</button>
+    </form>
+</body>
+</html>
