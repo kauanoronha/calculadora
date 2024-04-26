@@ -11,6 +11,8 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+     box-sizing: border-box; /* Garante que padding e bordas sejam contabilizados na largura total */
+
 }
 
 table {
@@ -29,6 +31,8 @@ th:first-child, td:first-child {
 }
 
 input[type="number"], button {
+    width: 100%; /* Faz o input ocupar no máximo 100% do seu container */
+    box-sizing: border-box; /* Mesmo efeito aqui para o input */
     padding: 12px; /* Mais espessura para facilitar a interação */
     margin: 5px 0; /* Aumenta a margem para separação clara em dispositivos móveis */
     width: 100%; /* Uso total da largura disponível */
@@ -41,6 +45,7 @@ button {
     border-radius: 10px; /* Mais arredondado */
     cursor: pointer;
     font-size: 16px; /* Tamanho de fonte maior para leitura fácil */
+    box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
