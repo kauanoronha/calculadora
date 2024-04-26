@@ -20,9 +20,10 @@ function calcularParcelas() {
         }
 
         valorParcela = montante / i;
+        valorparcelacheia = valorTotal / i;
 
         // Condição para o valor mínimo da parcela (R$ 20,00)
-        if (i > 1 && valorParcela < 20) {
+        if (i > 1 && valorparcelacheia < 20) {
             continue; // Pula para a próxima iteração do loop, não adicionando esta linha
         }
 
