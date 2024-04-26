@@ -34,6 +34,7 @@
         var precoFinal = precoComIpi + (precoComIpi * parseFloat(st) / 100);
 
         document.getElementById('resultado').textContent = precoFinal.toFixed(2);
+         salvarDados();
     }
     window.onload = function() {
         if(localStorage.getItem('custoInicial')) {
