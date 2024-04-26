@@ -21,6 +21,10 @@
     <h2>Preço Final: <span id="resultado"></span></h2>
 </body>
 <script>
+     function salvarDados() {
+        localStorage.setItem('custoInicial', document.getElementById('custoInicial').value);
+    
+    }
     function calcularPrecoFinal() {
         var custoInicial = document.getElementById('custoInicial').value;
         var ipi = document.getElementById('ipi').value;
@@ -31,5 +35,11 @@
 
         document.getElementById('resultado').textContent = precoFinal.toFixed(2);
     }
+    window.onload = function() {
+        if(localStorage.getItem('custoInicial')) {
+            document.getElementById('custoInicial').value = localStorage.getItem('custoInicial');
+        }
+       
+        }
 </script>
 </html>
